@@ -4,8 +4,9 @@ import { useField } from "formik";
 import classNames from "classnames";
 
 interface Props {
-  childrend: any;
-  props: any;
+  childrend?: any;
+  props?: any;
+  name: any;
 }
 
 const MyCheckbox: React.FC<Props> = ({ children, ...props }) => {
