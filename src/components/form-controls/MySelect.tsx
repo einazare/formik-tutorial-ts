@@ -3,7 +3,14 @@ import React from "react";
 import { useField } from "formik";
 import classNames from "classnames";
 
-const MySelect = ({ label, ...props }) => {
+interface Props {
+  label: any;
+  props?: any;
+  name: any;
+  id?: any;
+}
+
+const MySelect: React.FC<Props> = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   if (sessionStorage.getItem(field.name) !== field.value) {
     sessionStorage.setItem(field.name, field.value);
